@@ -151,7 +151,7 @@ function Mall(title, src) {
   
       if(Mall.roundCtr === Mall.roundLimit) {
   
-        alert('No more clicking for you!');
+        alert('Sorry , there is no more clicking!');
   
         Mall.container.removeEventListener('click', clickHandler);
   
