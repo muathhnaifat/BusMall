@@ -143,7 +143,7 @@ function clickHandler(event) {
 
   var clickedId = event.target.id;
   var mallClicked;
-  setBus();
+  setMall();
 
   if (clickedId === 'left-mall-image') {
     mallClicked = Mall.leftObject;
@@ -176,21 +176,21 @@ function clickHandler(event) {
     }
   }
 }
-function setBus() {
+function setMall() {
   var MallString = JSON.stringify(Mall.all)
   localStorage.setItem('bus', MallString)
 }
-function getBus() {
+function getMall() {
   var data = localStorage.getItem('bus');
   var MallData = JSON.parse(data)
   if (MallData) {
     Mall.all = MallData;
-    
+
   }
 
 }
 
-function  renderMallChart() {
+function renderMallChart() {
   var MallArray = [];
   var ClickArray = [];
   var ShownArry = [];
@@ -232,5 +232,5 @@ Mall.container.addEventListener('click', clickHandler);
 
 // updateTotals();
 renderNewMalls();
-getBus();
+getMall();
 
