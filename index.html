@@ -1,61 +1,53 @@
 <!DOCTYPE html>
 <html">
+  <head>
+    <title>BusMall</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+    </header>
+    <main>
+      <h1>Bus Mall</h1>
+      <section id="mall-container">
+        <div>
+          <img id="left-mall-image" src="img/banana.jpg" alt="banana">
+          <h2 id="left-mall-title">Title here</h2>
+        </div>
+        <div>
+          <img id="middle-mall-image" src="img/dog-duck.jpg" alt="dog-duck">
+          <h2 id="middle-mall-title">Title here</h2>
+        </div>
+        <div>
+          <img id="right-mall-image" src="img/chair.jpg" alt="chair">
+          <h2 id="right-mall-title">Title here</h2>
+        </div>
+        <!-- <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Items</th>
+                <th>Vote</th>
+                <th>Shown</th>
+              </tr>
+            </thead>
+            <tbody id="report">
+            </tbody>
+            <tfoot>
+            </tfoot>
+          </table>
+        </div> -->
+      </section>
+      <section id="output">
+        <ul>
+        </ul>
+      </section>
+      <canvas id="Mall-Chart"></canvas>
 
-<head>
-  
-  <title>BusMall</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-</head>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </main>
 
-<body>
-  <header>
-
-  </header>
-  <main>
-
-    <h1>Bus Mall</h1>
-    <section id="mall-container">
-
-      <div>
-        <img id="left-mall-image" src="img/banana.jpg" alt="banana">
-        <h2 id="left-mall-title">Title here</h2>
-      </div>
-      <div>
-        <img id="middle-mall-image" src="img/dog-duck.jpg" alt="dog-duck">
-        <h2 id="middle-mall-title">Title here</h2>
-      </div>
-      <div>
-        <img id="right-mall-image" src="img/chair.jpg" alt="chair">
-        <h2 id="right-mall-title">Title here</h2>
-      </div>
-
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Items</th>
-              <th>Vote</th>
-              <th>Shown</th>
-            </tr>
-          </thead>
-          <tbody id="report">
-          </tbody>
-          <tfoot>
-          </tfoot>
-        </table>
-      </div>
-    </section>
-
-    <canvas id="Mall-Chart"></canvas>
-  </main>
-  <footer>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    All Copyright To Bus Mall 2019
-  </footer>
-  <script src="app.js"></script>
-
- 
-</body>
-
-</html>
+    <script src="app.js"></script>
+  </body>
+  </html>

@@ -81,10 +81,8 @@ function renderNewMalls() {
 
   leftMallImageElement.setAttribute('src', Mall.leftObject.src);
   leftMallImageElement.setAttribute('alt', Mall.leftObject.title);
-
   middleMallImageElement.setAttribute('src', Mall.middleObject.src);
   middleMallImageElement.setAttribute('alt', Mall.middleObject.title);
-
   rightMallImageElement.setAttribute('src', Mall.rightObject.src);
   rightMallImageElement.setAttribute('alt', Mall.rightObject.title);
 
@@ -104,22 +102,30 @@ function randomInRange(min, max) {
   return rand;
 }
 
-function updateTotals() {
+// function updateTotals() {
 
-  var mallTable = document.getElementById('report');
-
-
-  mallTable.innerHTML = '';
-
-  for (var i = 0; i < Mall.all.length; i++) {
-    var mall = Mall.all[i];
-    var row = addElement('tr', mallTable);
-    addElement('td', row, mall.title);
-    addElement('td', row, '' + mall.clickCtr);
-    addElement('td', row, '' + mall.shownCtr);
+//   var tableBody = document.getElementById('report');
 
 
+//   tableBody.innerHTML = '';
+
+//   for (var i = 0; i < Mall.all.length; i++) {
+//     var mall = Mall.all[i];
+//     var row = addElement('tr', tableBody);
+//     addElement('td', row, mall.title);
+//     addElement('td', row, '' + mall.clickCtr);
+//     addElement('td', row, '' + mall.shownCtr);
+//   }
+// }
+
+function randersentnece() {
+  var containerSentence = document.getElementById('output');
+  for (let i = 0; i < Mall.all.length; i++) {
+    var current = Mall.all[i];
+    var sentence = current.title + ' had ' + current.clickCtr + ' votes and was shown ' + current.shownCtr + ' times';
+    addElement('li', containerSentence, sentence);
   }
+
 }
 
 function addElement(tag, container, text) {
@@ -151,15 +157,13 @@ function clickHandler(event) {
     mallClicked.clickCtr++;
     Mall.roundCtr++;
 
-    updateTotals();
+    // updateTotals();
 
     if (Mall.roundCtr === Mall.roundLimit) {
 
+      alert('Sorry , there is no more clicking!');
+      randersentnece();
       renderMallChart();
-
-      alert('Sorry , there is no more clicking .. Check the chart below');
-
-
 
       Mall.container.removeEventListener('click', clickHandler);
 
@@ -169,8 +173,7 @@ function clickHandler(event) {
     }
   }
 }
-
-function renderMallChart() {
+function  renderMallChart() {
   var MallArray = [];
   var ClickArray = [];
   var ShownArry = [];
@@ -210,5 +213,6 @@ function renderMallChart() {
 
 Mall.container.addEventListener('click', clickHandler);
 
-updateTotals();
+// updateTotals();
+
 renderNewMalls();
