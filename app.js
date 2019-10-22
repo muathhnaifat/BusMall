@@ -137,10 +137,13 @@ function addElement(tag, container, text) {
   return element;
 }
 
+
+
 function clickHandler(event) {
 
   var clickedId = event.target.id;
   var mallClicked;
+  setBus();
 
   if (clickedId === 'left-mall-image') {
     mallClicked = Mall.leftObject;
@@ -173,6 +176,20 @@ function clickHandler(event) {
     }
   }
 }
+function setBus() {
+  var MallString = JSON.stringify(Mall.all)
+  localStorage.setItem('bus', MallString)
+}
+function getBus() {
+  var data = localStorage.getItem('bus');
+  var MallData = JSON.parse(data)
+  if (MallData) {
+    Mall.all = MallData;
+    
+  }
+
+}
+
 function  renderMallChart() {
   var MallArray = [];
   var ClickArray = [];
@@ -214,5 +231,6 @@ function  renderMallChart() {
 Mall.container.addEventListener('click', clickHandler);
 
 // updateTotals();
-
 renderNewMalls();
+getBus();
+
