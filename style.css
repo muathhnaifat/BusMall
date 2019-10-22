@@ -1,11 +1,7 @@
-footer{
-  text-align: center;
-  margin-top: 800px;
-}
 
 * {
     box-sizing: border-box;
-    margin-left: 0px;
+    /* margin-left: 0px; */
     font-family: cursive;
     color: #561f2c96;
   }
@@ -31,7 +27,7 @@ footer{
     height: 200px;
     border: 3px solid rgba(44, 53, 33, 0.18);
     border-radius: 5%;
-    margin-top: 187px;
+    margin-top: 168px;
   }
   
   table {
@@ -48,4 +44,7 @@ footer{
     margin-top: -60px;
     border-radius: 5% ;
 
+  }
+  #output{
+    padding-top: 40px;
   }
