@@ -155,8 +155,8 @@ function clickHandler(event) {
 
     if (Mall.roundCtr === Mall.roundLimit) {
 
-       renderMallChart();
-      
+      renderMallChart();
+
       alert('Sorry , there is no more clicking .. Check the chart below');
 
 
@@ -170,7 +170,7 @@ function clickHandler(event) {
   }
 }
 
-function  renderMallChart() {
+function renderMallChart() {
   var MallArray = [];
   var ClickArray = [];
   var ShownArry = [];
