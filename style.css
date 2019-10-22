@@ -1,6 +1,6 @@
 footer{
   text-align: center;
-  margin-top: 800px;
+  margin-top: 5px;
 }
 
 * {
@@ -11,7 +11,7 @@ footer{
   }
   
   body {
-    background:radial-gradient(#1f1d1db6, rgba(14, 18, 19, 0.63) , #0e080bbd) fixed;
+    background:radial-gradient(#a931b9b6, rgba(83, 134, 134, 0.63) , #af7b9cbd) fixed;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;  
   }
@@ -24,6 +24,7 @@ footer{
     margin: auto;
     padding-top: 65px;
   }
+
   
   section div img {
     margin-left: 0px;
