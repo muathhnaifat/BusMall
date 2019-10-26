@@ -105,8 +105,6 @@ function randomInRange(min, max) {
 // function updateTotals() {
 
 //   var tableBody = document.getElementById('report');
-
-
 //   tableBody.innerHTML = '';
 
 //   for (var i = 0; i < Mall.all.length; i++) {
@@ -153,7 +151,7 @@ function clickHandler(event) {
     mallClicked = Mall.rightObject;
   }
   else {
-    console.log('Um, what was clicked on???', clickedId);
+    console.log('Um, what was clicked on !', clickedId);
   }
 
   if (mallClicked) {
@@ -176,6 +174,7 @@ function clickHandler(event) {
     }
   }
 }
+
 function setMall() {
   var MallString = JSON.stringify(Mall.all)
   localStorage.setItem('bus', MallString)
@@ -203,7 +202,7 @@ function renderMallChart() {
   }
   var ctx = document.getElementById('Mall-Chart').getContext('2d');
   var chart = new Chart(ctx, {
-    type: 'bar',
+    type: 'polarArea',
     data: {
       labels: ['bag', 'banana', 'bathroom', 'boots', 'breakfast', 'bubblegum', 'chair', 'cthulhu', 'dog-duck ',
         'dragon', 'pen', 'pet-sweep', 'scissors', 'shark', 'sweep', 'tauntaun', 'unicorn', 'usb', 'water-can', 'wine-glass'],
